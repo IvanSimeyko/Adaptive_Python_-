@@ -30,6 +30,23 @@ def snail():
         i += a
     return n
 
+
+def mkad():
+    """
+    The length of the Moscow Ring Road (MKAD) is 109 kilometers. Biker Vasya starts from the zero kilometer
+    of MKAD and drives with a speed of V kilometers per hour. On which mark will he stop after T hours?
+    """
+    v, t = int(input('Enter value v: ')), int(input('Enter value t: '))
+    #print(v,t)
+    def mark(marsh, len_mkad = 109):
+        if len_mkad > (marsh-len_mkad):
+            return marsh - len_mkad
+        else:
+            return mark(marsh-len_mkad, len_mkad)
+    if v > 0:
+        return mark(v*t, )
+
 if __name__ == '__main__':
-    print(snail())
+    print(mkad())
+    #print(snail())
     #print(squirrels())
