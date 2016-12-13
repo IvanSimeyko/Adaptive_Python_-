@@ -54,9 +54,18 @@ def calc_expr(a, b, c):
     z = (a+c/3)/4
     return x-y+z
 
+def loop_by_elem():
+    ans = 0
+    s = input('Enter string: ')
+    l = s.split()
+    for i in l:
+        ans += int(i)
+    return ans
+
 
 if __name__ == '__main__':
-    print(calc_expr(1, 2, -3))
+    print(loop_by_elem())
+    #print(calc_expr(1, 2, -3))
     #print(mkad())
     #print(snail())
     #print(squirrels())
