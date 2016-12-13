@@ -36,17 +36,27 @@ def mkad():
     The length of the Moscow Ring Road (MKAD) is 109 kilometers. Biker Vasya starts from the zero kilometer
     of MKAD and drives with a speed of V kilometers per hour. On which mark will he stop after T hours?
     """
-    v, t = int(input('Enter value v: ')), int(input('Enter value t: '))
-    #print(v,t)
-    def mark(marsh, len_mkad = 109):
-        if len_mkad > (marsh-len_mkad):
-            return marsh - len_mkad
+    v, t = abs(int(input('Enter value v: '))), int(input('Enter value t: '))
+    def mark(dist, len_mkad = 109):
+        if len_mkad > dist:
+            return dist
         else:
-            return mark(marsh-len_mkad, len_mkad)
-    if v > 0:
-        return mark(v*t, )
+            return mark(dist-len_mkad,)
+
+    return mark(v*t, )
+
+def calc_expr(a, b, c):
+    """
+    Write a function to compute the value of the following expression:
+    """
+    x = (a+b*c)/5
+    y = a**3
+    z = (a+c/3)/4
+    return x-y+z
+
 
 if __name__ == '__main__':
-    print(mkad())
+    print(calc_expr(1, 2, -3))
+    #print(mkad())
     #print(snail())
     #print(squirrels())
