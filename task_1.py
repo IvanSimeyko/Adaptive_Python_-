@@ -62,9 +62,20 @@ def loop_by_elem():
         ans += int(i)
     return ans
 
+def average_students():
+    d = {}
+    i = 0
+    number = int(input('enter number of students: '))
+    while i < number:
+        student = input('enter student`s data" ').split()
+        d[student[0] + ' ' + student[1]] = int(student[2])+int(student[3])+int(student[4])
+        i+=1
+
+    return d
 
 if __name__ == '__main__':
-    print(loop_by_elem())
+    print(average_students())
+    #print(loop_by_elem())
     #print(calc_expr(1, 2, -3))
     #print(mkad())
     #print(snail())
